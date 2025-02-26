@@ -8,7 +8,7 @@ import kotlin.math.pow
 import java.lang.ArithmeticException
 
 
-class CalculatorViewModel : ViewModel() {
+class SimpleCalculatorViewModel : ViewModel() {
     var operationText by mutableStateOf<String>("0")
         private set
     var operatorSign: Char = ' '
@@ -55,7 +55,7 @@ class CalculatorViewModel : ViewModel() {
                 '+' -> num1 + num2
                 '-' -> num1 - num2
                 'x' -> num1 * num2
-                '/' -> try {
+                '÷' -> try {
                     num1 / num2
                 } catch (e:ArithmeticException) {
                     "Not Defined"
